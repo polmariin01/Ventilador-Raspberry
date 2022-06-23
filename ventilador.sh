@@ -65,11 +65,11 @@ while [ 1 ]
 do
   # Fan ON
   setFanState $FAN $ON
-  sleep 30
   echo "ON"
+  sleep 20
 
   # Fan OFF
   setFanState $FAN $OFF
-  sleep 30
   echo "OFF"
+  sleep 20
 done
