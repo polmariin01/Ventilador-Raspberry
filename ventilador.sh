@@ -44,6 +44,8 @@ shutdown()
   exit 0
 }
 
+echo "Iniciando ventilador..."
+
 trap shutdown SIGINT
 
 # Export pin so that we can use it
@@ -55,14 +57,19 @@ setOutput $FAN
 # Turn the fan down to begin
 setFanOff
 
+# Chivatillo pa ver si lo hace bien
+echo "Ventilador iniciado!"
+
 # Loop forever until user presses Ctrl-C
 while [ 1 ]
 do
   # Fan ON
   setFanState $FAN $ON
   sleep 30
+  echo "ON"
 
   # Fan OFF
   setFanState $FAN $OFF
   sleep 30
+  echo "OFF"
 done
