@@ -5,7 +5,7 @@ BASE_GPIO_PATH=/sys/class/gpio
 
 # Assign names to GPIO pin number
 # The fan will be assigned in GPIO11 and the GND will be the pin next to it
-FAN=11
+FAN=2
 
 # Assign names to states
 ON="1"
